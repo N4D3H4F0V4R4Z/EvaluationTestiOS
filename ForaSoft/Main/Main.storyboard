@@ -1,7 +1,172 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qnM-oH-0FV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="eOW-i3-zth">
+            <objects>
+                <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="5kG-pU-cUF" customClass="MainViewController" customModule="ForaSoft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fDM-Pl-Cf3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-s1-eWD">
+                                <rect key="frame" x="0.0" y="38" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-LE-crg">
+                                <rect key="frame" x="0.0" y="93" width="414" height="803"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ovy-m8-A9V">
+                                    <size key="itemSize" width="400" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TrackCollectionViewCell" reuseIdentifier="MainCollectionViewCell" id="RPx-dC-hoN" customClass="MainCollectionViewCell" customModule="ForaSoft" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="0.0" width="400" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b9Z-zY-k2b" customClass="TrackCollectionViewCell" customModule="Test" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1P-5Q-fdr">
+                                                    <rect key="frame" x="144" y="40" width="246" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-uB-z6b">
+                                                    <rect key="frame" x="5" y="5" width="125" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="125" id="OXn-du-zOx"/>
+                                                        <constraint firstAttribute="width" constant="125" id="nX8-qT-eij"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szt-TK-ro6">
+                                                    <rect key="frame" x="144" y="80" width="246" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="WAv-uB-z6b" secondAttribute="bottom" constant="5" id="1ST-bd-WsA"/>
+                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="centerY" secondItem="b9Z-zY-k2b" secondAttribute="centerY" constant="-20" id="2rc-B6-7Ww"/>
+                                                <constraint firstItem="WAv-uB-z6b" firstAttribute="top" secondItem="b9Z-zY-k2b" secondAttribute="top" constant="5" id="3Q3-Xe-q2f"/>
+                                                <constraint firstItem="szt-TK-ro6" firstAttribute="top" secondItem="B1P-5Q-fdr" secondAttribute="bottom" constant="20" id="9pX-Sk-szm"/>
+                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="szt-TK-ro6" secondAttribute="bottom" constant="40" id="EuL-jD-Obd"/>
+                                                <constraint firstAttribute="trailing" secondItem="szt-TK-ro6" secondAttribute="trailing" constant="10" id="Gbg-Nv-MTm"/>
+                                                <constraint firstItem="szt-TK-ro6" firstAttribute="centerY" secondItem="b9Z-zY-k2b" secondAttribute="centerY" constant="20" id="Jbn-68-3vm"/>
+                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="top" relation="lessThanOrEqual" secondItem="b9Z-zY-k2b" secondAttribute="top" constant="40" id="Qhr-6x-dCD"/>
+                                                <constraint firstAttribute="trailing" secondItem="B1P-5Q-fdr" secondAttribute="trailing" constant="10" id="V5O-EN-cPh"/>
+                                                <constraint firstItem="szt-TK-ro6" firstAttribute="leading" secondItem="WAv-uB-z6b" secondAttribute="trailing" constant="14" id="Xyi-pK-tZk"/>
+                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="centerX" secondItem="szt-TK-ro6" secondAttribute="centerX" id="o5C-92-uQg"/>
+                                                <constraint firstItem="WAv-uB-z6b" firstAttribute="leading" secondItem="b9Z-zY-k2b" secondAttribute="leading" constant="5" id="t4p-FO-WP1"/>
+                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="leading" secondItem="WAv-uB-z6b" secondAttribute="trailing" constant="14" id="zPU-xU-gE4"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumArtistLabel" destination="szt-TK-ro6" id="kve-Od-3Cr"/>
+                                            <outlet property="albumImage" destination="WAv-uB-z6b" id="3bs-yj-YCw"/>
+                                            <outlet property="albumNameLabel" destination="B1P-5Q-fdr" id="zT2-d3-eN7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-Rd-Cjq">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRh-G5-Enj">
+                                <rect key="frame" x="182" y="450" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4F8-72-Vx2"/>
+                                    <constraint firstAttribute="height" constant="50" id="yG0-f5-CC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="🔍"/>
+                                <connections>
+                                    <action selector="startSearchButton:" destination="5kG-pU-cUF" eventType="touchUpInside" id="0ke-WY-gBG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FNP-EZ-DQx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AKY-s1-eWD" firstAttribute="leading" secondItem="FNP-EZ-DQx" secondAttribute="leading" id="37l-lV-FrZ"/>
+                            <constraint firstItem="VgE-Rd-Cjq" firstAttribute="centerY" secondItem="FNP-EZ-DQx" secondAttribute="centerY" id="7LX-qE-Fwf"/>
+                            <constraint firstItem="AKY-s1-eWD" firstAttribute="trailing" secondItem="FNP-EZ-DQx" secondAttribute="trailing" id="AFF-h3-uO8"/>
+                            <constraint firstItem="aPf-LE-crg" firstAttribute="centerX" secondItem="FNP-EZ-DQx" secondAttribute="centerX" id="Dpi-s7-xWF"/>
+                            <constraint firstItem="FNP-EZ-DQx" firstAttribute="trailing" secondItem="aPf-LE-crg" secondAttribute="trailing" id="FO0-ms-1gS"/>
+                            <constraint firstItem="aPf-LE-crg" firstAttribute="bottom" secondItem="FNP-EZ-DQx" secondAttribute="bottom" constant="34" id="e1Q-81-ypT"/>
+                            <constraint firstItem="VgE-Rd-Cjq" firstAttribute="centerX" secondItem="FNP-EZ-DQx" secondAttribute="centerX" id="hhW-AR-wNG"/>
+                            <constraint firstItem="AKY-s1-eWD" firstAttribute="top" secondItem="FNP-EZ-DQx" secondAttribute="top" constant="-50" id="nUL-Sn-avE"/>
+                            <constraint firstItem="aPf-LE-crg" firstAttribute="leading" secondItem="FNP-EZ-DQx" secondAttribute="leading" id="nfc-pZ-HCf"/>
+                            <constraint firstItem="TRh-G5-Enj" firstAttribute="centerX" secondItem="FNP-EZ-DQx" secondAttribute="centerX" id="ou8-7K-0V2"/>
+                            <constraint firstItem="aPf-LE-crg" firstAttribute="top" secondItem="AKY-s1-eWD" secondAttribute="bottom" constant="-1" id="rUx-Hn-LAK"/>
+                            <constraint firstItem="TRh-G5-Enj" firstAttribute="centerY" secondItem="VgE-Rd-Cjq" secondAttribute="centerY" id="uZe-5E-hlW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="Pe9-Og-ulB"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VgE-Rd-Cjq" id="tS5-jc-zld"/>
+                        <outlet property="collectionView" destination="aPf-LE-crg" id="F6p-aH-sdQ"/>
+                        <outlet property="searchBar" destination="AKY-s1-eWD" id="pnl-bF-IRw"/>
+                        <outlet property="searchBarConstraint" destination="nUL-Sn-avE" id="Q0j-cJ-OeJ"/>
+                        <outlet property="startSearchButton" destination="TRh-G5-Enj" id="78u-K4-8jt"/>
+                        <outlet property="startSearchButtonConstraint" destination="ou8-7K-0V2" id="5Ua-Rv-xsl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPs-ZA-mlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775.36231884058" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BLr-rd-MSc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qnM-oH-0FV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRH-zp-nbQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5kG-pU-cUF" kind="relationship" relationship="rootViewController" id="N4x-sj-g5y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtP-Be-MkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865.217391304348" y="26.785714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
