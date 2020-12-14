@@ -9,19 +9,23 @@ import UIKit
 
 class InformationViewController: UIViewController {
     
+    // - UI
     @IBOutlet weak var albumImage: UIImageView!
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    // - Data
     var album: Album!
     var image: UIImage!
     var tracks = [Track]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configure()
+        
         view.backgroundColor = .black
         self.title = album.artistName
         self.navigationController?.navigationBar.tintColor = .systemPink
@@ -35,12 +39,12 @@ class InformationViewController: UIViewController {
     func updateLabels() {
         albumNameLabel.text = album.collectionName
         artistNameLabel.text = album.artistName
-        informationLabel.text = "\(album.primaryGenreName ?? "")⋅\(album.country ?? "")⋅\(album.releaseDate ?? "")"
+        informationLabel.text = "\(album.primaryGenreName )⋅\(album.country )⋅\(album.releaseDate )"
         albumImage.image = image
     }
     
     func loadTracks() {
-        DataService.shared.getAlbumTracks(collectionId: album.collectionId ?? 00) { (requestedTracks) in
+        DataService.shared.getAlbumTracks(collectionId: album.collectionId ) { (requestedTracks) in
             self.tracks = requestedTracks
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -49,9 +53,10 @@ class InformationViewController: UIViewController {
     }
 }
 
-// MARK: - TableView methods
+// MARK: -
+// MARK: - TableViewDataSource & Delegate
 
-extension InformationViewController: UITableViewDelegate, UITableViewDataSource {
+extension InformationViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks.count

@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // - UI
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -16,31 +17,33 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchBarConstraint: NSLayoutConstraint!
     @IBOutlet weak var startSearchButtonConstraint: NSLayoutConstraint!
     
+    // - Data
     var albums = [Album]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
-        view.backgroundColor = .black
         
+        view.backgroundColor = .black
         activityIndicator.isHidden = true
         navigationItem.hidesSearchBarWhenScrolling = true
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "Artists, Songs, Lyrics and More", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
+    // - Action
     @IBAction func startSearchButton(_ sender: Any) {
         startSearchButton.isHidden = true
         animationSearchBar()
     }
 }
 
-// MARK: - CollectionViewDelegate
+// MARK: -
+// MARK: - CollectionViewDataSource
 
-extension MainViewController: UICollectionViewDelegate {
+extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return albums.count
@@ -56,9 +59,10 @@ extension MainViewController: UICollectionViewDelegate {
     
 }
 
-// MARK: - CollectionViewDataSource
+// MARK: -
+// MARK: - CollectionViewDelegate
 
-extension MainViewController: UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let album = albums[indexPath.row]
@@ -73,9 +77,9 @@ extension MainViewController: UICollectionViewDataSource {
         }
         searchBar.resignFirstResponder()
     }
-    
 }
 
+// MARK: -
 // MARK: - CollectionViewDelegateFlowLayout
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -93,11 +97,12 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 15, bottom: 10, right: 15)
+        return UIEdgeInsets(top: 15, left: 15, bottom: 20, right: 15)
     }
 }
 
-// MARK: - SearchBar methods
+// MARK: -
+// MARK: - SearchBarDelegate
 
 extension MainViewController: UISearchBarDelegate {
     
@@ -127,6 +132,7 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: -
 // MARK: - Configure
 
 private extension MainViewController {
@@ -137,8 +143,8 @@ private extension MainViewController {
     }
     
     func configureCollectionView() {
-        collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func configureSearchBar() {

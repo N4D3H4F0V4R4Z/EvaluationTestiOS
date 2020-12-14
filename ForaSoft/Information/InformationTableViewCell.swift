@@ -9,6 +9,7 @@ import UIKit
 
 class InformationTableViewCell: UITableViewCell {
 
+    // - UI
     @IBOutlet weak var trackNumber: UILabel!
     @IBOutlet weak var trackName: UILabel!
     

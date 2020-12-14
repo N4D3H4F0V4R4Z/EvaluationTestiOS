@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qnM-oH-0FV">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="5kG-pU-cUF" customClass="MainViewController" customModule="ForaSoft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDM-Pl-Cf3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-s1-eWD">
-                                <rect key="frame" x="0.0" y="38" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="38" width="428" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -27,24 +27,24 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-LE-crg">
-                                <rect key="frame" x="0.0" y="93" width="414" height="803"/>
+                                <rect key="frame" x="0.0" y="93" width="428" height="833"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ovy-m8-A9V">
-                                    <size key="itemSize" width="400" height="140"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ovy-m8-A9V">
+                                    <size key="itemSize" width="414" height="140"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TrackCollectionViewCell" reuseIdentifier="MainCollectionViewCell" id="RPx-dC-hoN" customClass="MainCollectionViewCell" customModule="ForaSoft" customModuleProvider="target">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="140"/>
+                                        <rect key="frame" x="7" y="0.0" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b9Z-zY-k2b" customClass="TrackCollectionViewCell" customModule="Test" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b9Z-zY-k2b" customClass="TrackCollectionViewCell" customModule="ForaSoft" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1P-5Q-fdr">
-                                                    <rect key="frame" x="144" y="40" width="246" height="20"/>
+                                                    <rect key="frame" x="144" y="40" width="260" height="20"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szt-TK-ro6">
-                                                    <rect key="frame" x="144" y="80" width="246" height="20"/>
+                                                    <rect key="frame" x="144" y="80" width="260" height="20"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -70,13 +70,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="WAv-uB-z6b" secondAttribute="bottom" constant="5" id="1ST-bd-WsA"/>
+                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="top" secondItem="b9Z-zY-k2b" secondAttribute="top" constant="40" id="1kQ-h7-wfY"/>
                                                 <constraint firstItem="B1P-5Q-fdr" firstAttribute="centerY" secondItem="b9Z-zY-k2b" secondAttribute="centerY" constant="-20" id="2rc-B6-7Ww"/>
                                                 <constraint firstItem="WAv-uB-z6b" firstAttribute="top" secondItem="b9Z-zY-k2b" secondAttribute="top" constant="5" id="3Q3-Xe-q2f"/>
+                                                <constraint firstAttribute="bottom" secondItem="szt-TK-ro6" secondAttribute="bottom" constant="40" id="9gQ-8z-H6r"/>
                                                 <constraint firstItem="szt-TK-ro6" firstAttribute="top" secondItem="B1P-5Q-fdr" secondAttribute="bottom" constant="20" id="9pX-Sk-szm"/>
-                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="szt-TK-ro6" secondAttribute="bottom" constant="40" id="EuL-jD-Obd"/>
                                                 <constraint firstAttribute="trailing" secondItem="szt-TK-ro6" secondAttribute="trailing" constant="10" id="Gbg-Nv-MTm"/>
                                                 <constraint firstItem="szt-TK-ro6" firstAttribute="centerY" secondItem="b9Z-zY-k2b" secondAttribute="centerY" constant="20" id="Jbn-68-3vm"/>
-                                                <constraint firstItem="B1P-5Q-fdr" firstAttribute="top" relation="lessThanOrEqual" secondItem="b9Z-zY-k2b" secondAttribute="top" constant="40" id="Qhr-6x-dCD"/>
                                                 <constraint firstAttribute="trailing" secondItem="B1P-5Q-fdr" secondAttribute="trailing" constant="10" id="V5O-EN-cPh"/>
                                                 <constraint firstItem="szt-TK-ro6" firstAttribute="leading" secondItem="WAv-uB-z6b" secondAttribute="trailing" constant="14" id="Xyi-pK-tZk"/>
                                                 <constraint firstItem="B1P-5Q-fdr" firstAttribute="centerX" secondItem="szt-TK-ro6" secondAttribute="centerX" id="o5C-92-uQg"/>
@@ -89,6 +89,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="140"/>
                                         <connections>
                                             <outlet property="albumArtistLabel" destination="szt-TK-ro6" id="kve-Od-3Cr"/>
                                             <outlet property="albumImage" destination="WAv-uB-z6b" id="3bs-yj-YCw"/>
@@ -98,11 +99,11 @@
                                 </cells>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-Rd-Cjq">
-                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <rect key="frame" x="195.66666666666666" y="471.66666666666669" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRh-G5-Enj">
-                                <rect key="frame" x="182" y="450" width="50" height="50"/>
+                                <rect key="frame" x="189" y="465" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4F8-72-Vx2"/>
                                     <constraint firstAttribute="height" constant="50" id="yG0-f5-CC9"/>
@@ -151,7 +152,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qnM-oH-0FV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRH-zp-nbQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
